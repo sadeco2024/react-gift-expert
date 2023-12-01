@@ -2,6 +2,8 @@
 
 import { GifGridItem } from "./GifGridItem";
 import { useFetchGifts } from "../hooks/useFetchGifts";
+import PropTypes from 'prop-types';
+
 
 
 export const GifGrid = ({categoria}) => {
@@ -28,4 +30,8 @@ export const GifGrid = ({categoria}) => {
         <button onClick={() => setCounter(counter + +1) }>+1</button> */}
     </>
   )
+}
+
+GifGrid.propTypes = {
+  categoria: PropTypes.string.isRequired
 }
